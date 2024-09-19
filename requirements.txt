@@ -1,7 +1,2 @@
-black
-flake8
-isort
-mkdocs
-pip
-python-dotenv
--e .
+xgboost
+tabulate
