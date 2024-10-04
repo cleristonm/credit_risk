@@ -1,2 +1,4 @@
+jupyter
+nbconvert
 xgboost
 tabulate
