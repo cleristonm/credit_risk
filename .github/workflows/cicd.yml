@@ -20,10 +20,11 @@ jobs:
       - name: Commitar e pushar arquivos
         run: |
           git config --global user.email "cleriston@gmail.com"
-          git config --global user.name "github-actions[bot]"
+          git config --global user.name "Cleriston Martinelo"
           git add .
-          git commit -m "MAJ du Modele""
-          git push
+          git commit -m "MAJ du modele"
+          git push origin HEAD:master
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
