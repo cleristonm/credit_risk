@@ -1,0 +1,29 @@
+name: Execute Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  execute-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v2
+      - name: Installer dependances
+        run: |
+          pip install -r requirements.txt
+      - name: Convertir les notebooks 
+        run: |
+          jupyter nbconvert --to script notebooks/03_Developement_Modele.ipynb
+      - name: Commitar e pushar arquivos
+        run: |
+          git config --global user.email "github-actions[bot]@(link unavailable)"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "MAJ du Modele""
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
