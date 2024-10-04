@@ -19,7 +19,7 @@ jobs:
           jupyter nbconvert --to script notebooks/03_Developement_Modele.ipynb
       - name: Commitar e pushar arquivos
         run: |
-          git config --global user.email "github-actions[bot]@(link unavailable)"
+          git config --global user.email "cleriston@gmail.com"
           git config --global user.name "github-actions[bot]"
           git add .
           git commit -m "MAJ du Modele""
