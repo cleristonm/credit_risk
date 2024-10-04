@@ -23,7 +23,7 @@ jobs:
           git config --global user.name "Cleriston Martinelo"
           git add .
           git commit -m "MAJ du modele"
-          git push origin HEAD:master
+          git push origin HEAD:main
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
