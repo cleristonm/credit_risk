@@ -3,4 +3,4 @@ jupyter
 nbconvert
 xgboost
 tabulate
-sklearn
+scikit-learn
