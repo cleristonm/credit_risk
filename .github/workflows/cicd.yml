@@ -16,7 +16,12 @@ jobs:
           pip install -r requirements.txt
       - name: Convertir les notebooks 
         run: |
-          jupyter nbconvert --to script notebooks/03_Developement_Modele.ipynb
+          jupyter nbconvert --to script notebooks/03_Developement_Modele.ipynb script notebooks/02_Pre_traitement.ipynb
+          mv notebooks/*.py credit_risk
+      - name: Generer le modele 
+        run: |
+          python credit_risk/02_Pre_traitement.py
+          python credit_risk/03_Developement_Modele.py       
       - name: Commitar e pushar arquivos
         run: |
           git config --global user.email "cleriston@gmail.com"
