@@ -20,8 +20,9 @@ jobs:
           mv notebooks/*.py credit_risk
       - name: Generer le modele 
         run: |
-          python credit_risk/02_Pre_traitement.py
-          python credit_risk/03_Developement_Modele.py       
+          cd credit_risk
+          python 02_Pre_traitement.py
+          python 03_Developement_Modele.py       
       - name: Commitar e pushar arquivos
         run: |
           git config --global user.email "cleriston@gmail.com"
