@@ -23,7 +23,7 @@ jobs:
           cd credit_risk
           python 02_Pre_traitement.py
           python 03_Developement_Modele.py       
-      - name: Commitar e pushar arquivos
+      - name: Commiter et pousser les fichers
         run: |
           git config --global user.email "cleriston@gmail.com"
           git config --global user.name "Cleriston Martinelo"
